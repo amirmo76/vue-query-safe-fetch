@@ -37,15 +37,5 @@
 </template>
 
 <script lang="ts" setup>
-import { useQuery } from "@tanstack/vue-query"
-
-const getUsers = () =>
-    fetch("https://dummyjson.com/users").then((res) => res.json())
-
-const { isPending, isError, data, isSuccess } = useQuery({
-    queryKey: ["users"],
-    queryFn: getUsers,
-})
-
-watch(data, () => console.log(data))
+const { isPending, isError, data, isSuccess } = useApi().getUsers()
 </script>
