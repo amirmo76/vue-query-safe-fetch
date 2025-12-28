@@ -1,75 +1,10 @@
-# Nuxt Minimal Starter
+# vue-query-safe-fetch
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A production-ready pattern for Vue/Nuxt that groups type-safe endpoints into a single, cohesive composable. It leverages **TanStack Query**, **Zod**, and **TypeScript** to provide strict runtime validation and autocompletion.
 
-## Setup
+## 🚀 Features
 
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+* **Grouped API Composable**: Access all your endpoints via a clean `useApi().getUsers()` syntax.
+* **Runtime Validation**: Zod ensures API responses match your TypeScript interfaces perfectly.
+* **TanStack Query Powered**: Automatic caching, deduping, and loading states (`isPending`, `isError`).
+* **Centralized Error Handling**: Custom `ApiError` class for consistent logic across your app.
